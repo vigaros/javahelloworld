@@ -1,26 +1,35 @@
-# This references a standard debian container from the
-# Docker Hub https://registry.hub.docker.com/_/debian/
-# Read more about containers on our dev center
-# https://devcenter.wercker.com/overview-and-core-concepts/containers/
-box: debian
-# You can also use services such as databases. Read more on our dev center:
-# https://devcenter.wercker.com/administration/services/
-# services:
-    # - postgres
-    # https://devcenter.wercker.com/administration/services/examples/postgresql/
-
-    # - mongo
-    # https://devcenter.wercker.com/administration/services/examples/mongodb/
-
-# This is the build pipeline. Pipelines are the core of wercker
-# Read more about pipelines on our dev center
-# https://devcenter.wercker.com/development/pipelines/
+box: ubuntu
 build:
-    # Steps make up the actions in your pipeline
-    # Read more about steps on our dev center:
-    # https://devcenter.wercker.com/development/steps/
   steps:
     - script:
-        name: echo
-        code: |
-          echo "hello world!"
+      name: step one
+      code: echo "Step One"
+    - script:
+      name: step two
+      code: echo "Step Two"
+    - script:
+      name: step three
+      code: echo "Step Three"
+    - script:
+      name: step four
+      code: echo "Step Four"
+    - script:
+      name: step five
+      code: echo "Step Five"
+deploy:
+  steps:
+    - script:
+      name: step one
+      code: echo "Step One"
+    - script:
+      name: step two
+      code: echo "Step Two"
+    - script:
+      name: step three
+      code: echo "Step Three"
+    - script:
+      name: step four
+      code: echo "Step Four"
+    - script:
+      name: step five
+      code: echo "Step Five"
